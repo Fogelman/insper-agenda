@@ -1,0 +1,15 @@
+{
+  "name": "node-insper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^7.0.0",
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}
