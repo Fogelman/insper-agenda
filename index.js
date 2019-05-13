@@ -6,7 +6,9 @@ const dotenv = require('dotenv').config();
 const run = async chatId => {
   const events = await Events.get();
   if (events) {
-    return bot.sendMessage(chatId, events.toString());
+    return bot.sendMessage(chatId, Events.format(events), {
+      parse_mode: 'HTML'
+    });
   }
   return null;
 };
