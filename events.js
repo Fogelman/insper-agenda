@@ -8,11 +8,13 @@ BASE64 = str => {
 };
 
 titleCase = str => {
-  str = str.toLowerCase().split(' ');
-  for (var i = 0; i < str.length; i++) {
-    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
-  }
-  return str.join(' ');
+  return str
+    .toLowerCase()
+    .split(' ')
+    .map(word => {
+      return word.replace(word[0], word[0].toUpperCase());
+    })
+    .join(' ');
 };
 
 class Events {
