@@ -17,7 +17,14 @@ const bot = new TelegramBot(token, { polling: true });
 
 bot.on('message', msg => {
   const chatId = msg.chat.id;
-  run(chatId);
+
+  if (process.env.TELEGRAM_ID) {
+    if (chatId && process.env.TELEGRAM_ID) {
+      run(chatId);
+    }
+  } else {
+    run(chatId);
+  }
 });
 
 bot.on('polling_error', error => {
