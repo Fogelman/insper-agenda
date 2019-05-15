@@ -81,7 +81,7 @@ class Events {
 
       msg += date[1] + ' - ' + date[3] + '\n';
       msg += '<b>' + titleCase(element.title) + '</b> \n';
-      msg += '<i>' + element.room.toLowerCase() + '</i> \n';
+      msg += '<i>' + titleCase(element.room )+ '</i> \n';
       msg += '\n';
     });
 
