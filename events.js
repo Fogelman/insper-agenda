@@ -75,6 +75,7 @@ class Events {
     var msg = '';
     events.forEach(element => {
       let date = element.date.split(' ');
+      let asIndex = date.indexOf('às');
       msg += '<b>';
       if (element.activity === 'Atividade Escolar') {
         msg += element.type;
@@ -83,8 +84,8 @@ class Events {
       }
       msg += '</b> \n';
 
-      msg += date[1] + ' - ' + date[3] + '\n';
-      msg += '<b>' + titleCase(element.title) + '</b> \n';
+      msg += date[asIndex - 1] + ' - ' + date[asIndex + 1] + '\n';
+      msg += '<b>' + element.title.toLowerCase() + '</b> \n';
       msg += '<i>' + element.room + '</i> \n';
       msg += '\n';
     });
