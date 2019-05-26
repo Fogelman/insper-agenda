@@ -11,7 +11,18 @@ const run = async chatId => {
       msg = '<b>Você não tem nenhum evento do Insper hoje!</b>';
     }
     return bot.sendMessage(chatId, msg, {
-      parse_mode: 'HTML'
+      parse_mode: 'HTML',
+      reply_markup: {
+        keyboard: [
+          [
+            {
+              text: 'INSPER - AGENDA'
+            }
+          ]
+        ],
+        one_time_keyboard: false,
+        resize_keyboard: true
+      }
     });
   }
   return null;
