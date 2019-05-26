@@ -6,7 +6,11 @@ const dotenv = require('dotenv').config();
 const run = async chatId => {
   const events = await Events.get();
   if (events) {
-    return bot.sendMessage(chatId, Events.format(events), {
+    var msg = Events.format(events);
+    if (msg === '') {
+      msg = '<b>Você não tem nenhum evento do Insper hoje!</b>';
+    }
+    return bot.sendMessage(chatId, msg, {
       parse_mode: 'HTML'
     });
   }

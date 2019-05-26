@@ -73,9 +73,6 @@ class Events {
 
   format(events) {
     var msg = '';
-    if (process.env.MESSAGE_DEBUG || false == 'true') {
-      msg += 'Insper-agenda';
-    }
     events.forEach(element => {
       let date = element.date.split(' ');
       let asIndex = date.indexOf('às');
