@@ -3,15 +3,6 @@ const Events = require('./events');
 const TelegramBot = require('node-telegram-bot-api');
 const dotenv = require('dotenv').config();
 
-/*
- * App has to bind to PORT heroku
- */
-if (process.env.PORT) {
-  const express = require('express');
-  const app = express();
-  app.listen(process.env.PORT);
-}
-
 const run = async chatId => {
   const events = await Events.get();
   if (events) {
