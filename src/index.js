@@ -16,13 +16,13 @@ const run = async chatId => {
         keyboard: [
           [
             {
-              text: 'INSPER - AGENDA'
-            }
-          ]
+              text: 'INSPER - AGENDA',
+            },
+          ],
         ],
         one_time_keyboard: false,
-        resize_keyboard: true
-      }
+        resize_keyboard: true,
+      },
     });
   }
   return null;
