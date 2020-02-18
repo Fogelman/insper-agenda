@@ -57,8 +57,7 @@ class Events {
     const request = await axios({
       method: 'get',
       url:
-        'http://portaldoalunoapp.insper.edu.br/restrito/controlealocacao/calendarioacademico.aspx',
-
+        'https://portaldoalunoapp.insper.edu.br/restrito/controlealocacao/calendarioacademico.aspx',
       withCredentials: true,
       headers: {
         Authorization:
