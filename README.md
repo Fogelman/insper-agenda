@@ -7,7 +7,7 @@ A node webscrapper for insper [calendar website](http://portaldoalunoapp.insper.
 ## Download
 
 ```
-git clone https://github.com/Fogelman/insper-agenda
+git clone https://github.com/Fogelman/insperbot
 cd insper-agenda
 ```
 
