@@ -1,4 +1,4 @@
-# insper-agenda
+# insperbot
 
 A node webscrapper for insper [calendar website](http://portaldoalunoapp.insper.edu.br/restrito/controlealocacao/calendarioacademico.aspx) using cheerios and axios
 
